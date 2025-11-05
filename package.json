@@ -1,0 +1,45 @@
+{
+  "name": "@webtechjournals/hoox",
+  "version": "0.1.0",
+  "description": "A small, tree-shakeable collection of essential React hooks — lightweight, typed, and production-ready.",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist types",
+    "build:js": "rollup -c",
+    "build:types": "rollup -c rollup.types.config.js",
+    "build": "npm run clean && npm run build:js && npm run build:types",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jsdom": "^22.1.0",
+    "prettier": "^2.8.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.0",
+    "vitest": "^1.6.1"
+  }
+}
