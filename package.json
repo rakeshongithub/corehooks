@@ -1,7 +1,7 @@
 {
   "name": "corehooks",
   "version": "0.1.0",
-  "description": "🪝 A lightweight, tree-shakeable collection of essential React hooks for modern applications.",
+  "description": "A lightweight, tree-shakeable collection of essential React hooks for modern applications.",
   "author": {
     "name": "Rakesh Kumar",
     "email": "rakeshpersonal@gmail.com",
@@ -38,6 +38,7 @@
     "react": ">=18"
   },
   "scripts": {
+    "commit": "cz",
     "prepare": "husky install",
     "clean": "rm -rf dist types",
     "build:js": "rollup -c",
@@ -70,6 +71,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.0",
     "husky": "^9.1.7",
     "jsdom": "^22.1.0",
