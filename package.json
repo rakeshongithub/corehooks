@@ -86,10 +86,6 @@
     "*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "git add"
-    ],
-    "*.{md,css,json}": [
-      "prettier --write",
-      "git add"
     ]
   },
   "config": {
