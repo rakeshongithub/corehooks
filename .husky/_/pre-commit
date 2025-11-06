@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Skip hooks in CI
+[ "$CI" = "true" ] && exit 0
+
+npx --no -- lint-staged
+npm test

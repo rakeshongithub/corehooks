@@ -44,7 +44,7 @@
     "build:js": "rollup -c",
     "build:types": "rollup -c rollup.types.config.js",
     "build": "npm run clean && npm run build:js && npm run build:types",
-    "test": "vitest",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "check:commitmsg": "commitlint --from=HEAD~1",
