@@ -1,7 +1,31 @@
 {
-  "name": "@webtechjournals/hoox",
+  "name": "corehooks",
   "version": "0.1.0",
-  "description": "A small, tree-shakeable collection of essential React hooks — lightweight, typed, and production-ready.",
+  "description": "🪝 A lightweight, tree-shakeable collection of essential React hooks for modern applications.",
+  "author": {
+    "name": "Rakesh Kumar",
+    "email": "rakeshpersonal@gmail.com",
+    "url": "https://github.com/rakeshongithub"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakeshongithub/corehooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rakeshongithub/corehooks/issues"
+  },
+  "homepage": "https://github.com/rakeshongithub/corehooks#readme",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "custom-hooks",
+    "typescript",
+    "frontend",
+    "webtechjournals",
+    "corehooks"
+  ],
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
