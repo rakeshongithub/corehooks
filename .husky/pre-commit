@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/h"
-
-# replace with your commands, e.g. lint or tests
-npm run lint && npm test
-npx --no -- lint-staged
