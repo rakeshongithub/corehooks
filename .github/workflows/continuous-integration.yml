@@ -16,23 +16,33 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24.11.0
           cache: "npm"
 
+      - name: Upgrade npm (avoid optional-deps bug)
+        run: npm install -g npm@latest
+
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+
+      - name: Ensure rollup platform package present (workaround)
+        run: npm install --no-save @rollup/rollup-linux-x64-gnu@latest
+
+      - name: Test
+        run: npx vitest run
 
       - name: Build
         run: npm run build
-
-      - name: Test
-        run: npm test
 
   release:
     # Only run release on pushes to main (not on PRs)
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,7 +52,7 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24.11.0
           registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
