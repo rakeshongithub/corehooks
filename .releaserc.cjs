@@ -1,7 +1,7 @@
 // .releaserc.js
 module.exports = {
   branches: ["main"],
-  repositoryUrl: "https://github.com/rakeshongithub/corehooks", // update to your repo URL
+  repositoryUrl: "https://github.com/rakeshongithub/corehooks.git", // update to your repo URL
   plugins: [
     "@semantic-release/commit-analyzer", // determines release type from commits
     "@semantic-release/release-notes-generator",
