@@ -1,10 +1,15 @@
-name: CI
+name: CoreHooks Release Workflow
 
 on:
   pull_request:
     branches: [main]
   push:
     branches: [main]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   build:
@@ -59,10 +64,10 @@ jobs:
           git remote -v
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Use Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24.11.0
+          node-version: "lts/*"
           registry-url: "https://registry.npmjs.org/"
 
       - name: Configure npm auth

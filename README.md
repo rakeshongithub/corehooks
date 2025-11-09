@@ -19,9 +19,9 @@ Created by [**@rakeshongithub**](https://github.com/rakeshongithub), it focuses 
 ## 📦 Installation
 
 ```bash
-npm install corehooks
+npm install @webtecjournals/corehooks
 # or
-yarn add corehooks
+yarn add @webtecjournals/corehooks
 ```
 
 ---
@@ -33,7 +33,7 @@ yarn add corehooks
 A simple state toggle hook — great for boolean flags, modals, dropdowns, etc.
 
 ```javascript
-import { useToggle } from "corehooks";
+import { useToggle } from "@webtecjournals/corehooks";
 
 function ToggleExample() {
   const { on, toggle } = useToggle(false);
@@ -56,7 +56,7 @@ const { on, toggle } = useToggle(initialValue?: boolean);
 Delays updates to a value until after a given delay — useful for search inputs and API calls.
 
 ```javascript
-import { useDebounce } from "corehooks";
+import { useDebounce } from "@webtecjournals/corehooks";
 
 function SearchInput() {
   const [text, setText] = useState("");
@@ -84,7 +84,7 @@ const debouncedValue = useDebounce<T>(value: T, delay: number);
 Safely attach and clean up DOM or window event listeners.
 
 ```javascript
-import { useEventListener } from "corehooks";
+import { useEventListener } from "@webtecjournals/corehooks";
 
 function ResizeLogger() {
   useEventListener("resize", () => {
@@ -113,7 +113,7 @@ useEventListener<K extends keyof WindowEventMap>(
 Persist state to localStorage — fully typed and synced automatically.
 
 ```javascript
-import { useLocalStorage } from "corehooks";
+import { useLocalStorage } from "@webtecjournals/corehooks";
 
 function ThemeToggle() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
@@ -140,7 +140,7 @@ const [value, setValue] = useLocalStorage<T>(key: string, initialValue: T);
 Manage async operations with loading, error, and value states — ideal for fetching data.
 
 ```javascript
-import { useAsync } from "corehooks";
+import { useAsync } from "@webtecjournals/corehooks";
 
 function DataFetcher() {
   const fetchData = () => fetch("/api/data").then((res) => res.json());
@@ -186,7 +186,7 @@ import { useAsync } from "corehooks/useAsync";
 Or import all from root:
 
 ```javascript
-import { useToggle, useLocalStorage } from "corehooks";
+import { useToggle, useLocalStorage } from "@webtecjournals/corehooks";
 ```
 
 ---
